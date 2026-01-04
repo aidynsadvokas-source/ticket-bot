@@ -73,8 +73,8 @@ client.on('interactionCreate', async (interaction) => {
     if (existing) return interaction.reply({ content: 'You already have an open ticket!', ephemeral: true });
 
     // Find the category
-    const category = guild.channels.cache.find(c => c.name === 'tickets🎟️' && c.type === ChannelType.GuildCategory);
-    if (!category) return interaction.reply({ content: '❌ Tickets category not found. Please create a category named "tickets🎟️".', ephemeral: true });
+    const category = guild.channels.cache.find(c => c.name === 'tickets' && c.type === ChannelType.GuildCategory);
+    if (!category) return interaction.reply({ content: '❌ Tickets category not found. Please create a category named "tickets".', ephemeral: true });
 
     // Create ticket channel under the category
     const ticketChannel = await guild.channels.create({
@@ -148,3 +148,4 @@ client.on('interactionCreate', async (interaction) => {
     interaction.reply({ content: '✅ Ticket will be closed shortly.', ephemeral: true });
   }
 });
+
