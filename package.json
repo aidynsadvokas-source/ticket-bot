@@ -6,7 +6,11 @@
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": ["discord", "bot", "ticket"],
+  "keywords": [
+    "discord",
+    "bot",
+    "ticket"
+  ],
   "author": "Your Name",
   "license": "ISC",
   "dependencies": {
